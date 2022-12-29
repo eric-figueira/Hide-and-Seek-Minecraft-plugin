@@ -1,0 +1,21 @@
+name: HideNSeek
+version: '${project.version}'
+main: hidenseek.hidenseek.HideNSeek
+api-version: 1.17
+authors: [ kortsu22 ]
+commands:
+  start:
+    usage: /<command>
+    description: Starts a Hide and Seek match
+  setfirstspawn:
+    usage: /<command>
+    description: Sets the spawn of the first seeker
+  setspawnothers:
+    usage: /<command>
+    description: Sets the spawn of the others seekers
+  stopgame:
+    usage: /<command>
+    description: Stops a Hide and Seek match
+  restartgame:
+    usage: /<command>
+    description: Restarts the current game of Hide and Seek
