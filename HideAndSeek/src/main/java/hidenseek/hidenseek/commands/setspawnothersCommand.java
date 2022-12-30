@@ -26,7 +26,7 @@ public class setspawnothersCommand implements CommandExecutor {
             this.plugin.getConfig().set("othersspawn", l);
             this.plugin.saveConfig();
 
-            p.sendMessage(ChatColor.GREEN + "The spawn for others seekers has been successfully set!");
+            p.sendMessage(ChatColor.GREEN + "The hiders's spawn has been successfully set!");
         }
         else
             sender.sendMessage("Only players can use this command!");

@@ -20,12 +20,12 @@ public class seekerReleaseCountdown extends BukkitRunnable {
         if (this.timeLeft <= 0) {
             this.gameManager.setCanFirstSeekerMove(true);
             Bukkit.broadcastMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "The seeker was released!");
+            this.gameManager.startGameCountdown();
             cancel();
             return;
         }
 
-        if (this.timeLeft % 5 == 0) {
-            Bukkit.broadcastMessage(ChatColor.YELLOW + "The seeker is being released in " + ChatColor.WHITE + "" + timeLeft + ChatColor.YELLOW + " seconds");
-        }
+        if (this.timeLeft % 5 == 0) Bukkit.broadcastMessage(ChatColor.YELLOW + "The seeker is being released in " + ChatColor.WHITE + "" + timeLeft + ChatColor.YELLOW + " seconds");
+        if (this.timeLeft < 5) Bukkit.broadcastMessage(ChatColor.YELLOW + "The seeker is being released in " + ChatColor.WHITE + "" + timeLeft + ChatColor.YELLOW + " seconds");
     }
 }

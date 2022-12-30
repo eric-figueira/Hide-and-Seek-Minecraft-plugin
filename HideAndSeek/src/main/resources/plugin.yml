@@ -4,18 +4,18 @@ main: hidenseek.hidenseek.HideNSeek
 api-version: 1.17
 authors: [ kortsu22 ]
 commands:
-  start:
+  startgame:
     usage: /<command>
     description: Starts a Hide and Seek match
-  setfirstspawn:
+  setseekersspawn:
     usage: /<command>
-    description: Sets the spawn of the first seeker
-  setspawnothers:
+    description: Sets the spawn for the seekers
+  sethidersspawn:
     usage: /<command>
-    description: Sets the spawn of the others seekers
+    description: Sets the spawn for the hiders
   stopgame:
     usage: /<command>
     description: Stops a Hide and Seek match
-  restartgame:
+  timeremaining:
     usage: /<command>
-    description: Restarts the current game of Hide and Seek
+    description: Gives you the remaining time of the Hide and Seek game

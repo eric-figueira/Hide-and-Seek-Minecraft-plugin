@@ -15,11 +15,11 @@ public final class HideNSeek extends JavaPlugin {
 
         GameManager gameManager = new GameManager(this);
 
-        getCommand("setfirstspawn").setExecutor(new setfirstspawnCommand(this));
-        getCommand("setspawnothers").setExecutor(new setspawnothersCommand(this));
-        getCommand("start").setExecutor(new startCommand(this, gameManager));
+        getCommand("setseekersspawn").setExecutor(new setfirstspawnCommand(this));
+        getCommand("sethidersspawn").setExecutor(new setspawnothersCommand(this));
+        getCommand("startgame").setExecutor(new startCommand(this, gameManager));
         getCommand("stopgame").setExecutor(new stopCommand(this, gameManager));
-        getCommand("restartgame").setExecutor(new restartCommand(this, gameManager));
+        getCommand("timeremaining").setExecutor(new gettimeCommand(gameManager));
 
 
         getServer().getPluginManager().registerEvents(new falldamageListener(this, gameManager), this);

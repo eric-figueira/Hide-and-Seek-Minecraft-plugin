@@ -26,7 +26,7 @@ public class setfirstspawnCommand implements CommandExecutor {
             this.plugin.getConfig().set("firstspawn", l);
             this.plugin.saveConfig();
 
-            p.sendMessage(ChatColor.GREEN + "The first spawn has been successfully set!");
+            p.sendMessage(ChatColor.GREEN + "The seekers's spawn has been successfully set!");
         }
         else
             sender.sendMessage("Only players can use this command!");

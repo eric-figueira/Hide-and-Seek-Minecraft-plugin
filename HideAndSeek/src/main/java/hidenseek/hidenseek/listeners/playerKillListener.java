@@ -4,6 +4,8 @@ import hidenseek.hidenseek.HideNSeek;
 import hidenseek.hidenseek.managers.GameManager;
 import hidenseek.hidenseek.managers.GameState;
 import org.bukkit.ChatColor;
+import org.bukkit.Instrument;
+import org.bukkit.Note;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -32,7 +34,9 @@ public class playerKillListener implements Listener {
                             event.setCancelled(true);
                         else { // A hider
                             this.gameManager.makePlayerSeeker(killed);
-                            killer.sendMessage(ChatColor.YELLOW + "You made " + killed.getDisplayName() + " a seeker!");
+                            killer.sendMessage(ChatColor.YELLOW + "You found " + ChatColor.WHITE + killed.getDisplayName() + ChatColor.YELLOW + "!");
+                            killed.sendMessage(ChatColor.WHITE + killed.getDisplayName() + "" + ChatColor.YELLOW + " found you!");
+                            killer.playNote(killer.getLocation(), Instrument.PIANO, Note.natural(1, Note.Tone.A));
                         }
                     }
                 }
